@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Affiliate Disclaimer | Paw Store</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f7f9fc;
+      color: #333;
+    }
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      background: #ffffff;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+      position: relative;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      color: #007acc;
+      flex-grow: 1;
+      white-space: nowrap;
+    }
+
+    .logo:hover {
+      color: #005f99;
+    }
+
+    nav {
+      display: flex;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #007acc;
+    }
+
+    .menu-icon {
+      display: none;
+      cursor: pointer;
+    }
+
+    .menu-icon img {
+      width: 30px;
+      height: 30px;
+    }
+
+    .policy-container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 40px 30px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 122, 204, 0.08);
+    }
+
+    .policy-container h1 {
+      font-size: 32px;
+      color: #007acc;
+      margin-bottom: 25px;
+      border-bottom: 2px solid #e0e0e0;
+      padding-bottom: 10px;
+    }
+
+    .policy-container h2 {
+      font-size: 22px;
+      color: #005f99;
+      margin-top: 30px;
+    }
+
+    .policy-container p {
+      font-size: 16px;
+      color: #444;
+      line-height: 1.6;
+      margin: 15px 0;
+    }
+
+    .policy-container a {
+      color: #007acc;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      .logo {
+        font-size: 18px;
+      }
+
+      .policy-container {
+        margin: 20px 10px;
+        padding: 25px 20px;
+      }
+
+      .policy-container h1 {
+        font-size: 24px;
+      }
+
+      .policy-container h2 {
+        font-size: 18px;
+      }
+
+      .policy-container p {
+        font-size: 15px;
+      }
+
+      nav {
+        position: absolute;
+        top: 100%;
+        right: 20px;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        display: none;
+        flex-direction: column;
+        padding: 10px 0;
+        z-index: 1000;
+        opacity: 0;
+        transform: scale(0.95);
+        transform-origin: top right;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        min-width: 160px;
+      }
+
+      nav.active {
+        display: flex;
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+
+      nav ul li a {
+        font-size: 14px;
+        padding: 8px 12px;
+        display: block;
+        width: 100%;
+        text-align: center;
+        transition: background 0.3s ease;
+      }
+
+      nav ul li a:hover {
+        background-color: #f0f0f0;
+      }
+
+      .menu-icon {
+        display: block;
+        margin-left: 15px;
+      }
+
+      header {
+        flex-wrap: wrap;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">PAW STORE</div>
+    <div class="menu-icon" id="menu-icon">
+      <img src="Images/menu-icon.svg" alt="Menu" />
+    </div>
+    <nav id="nav-menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="policy-container">
+    <h1>Affiliate Disclaimer</h1>
+    <p><strong>Paw Store</strong> is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.in.</p>
+
+    <h2>What Does This Mean?</h2>
+    <p>This means that when you click on product links on our site and make a purchase on Amazon, we may earn a small commission from your transaction — at no extra cost to you. These commissions help support our platform.</p>
+
+    <h2>Our Product Selection</h2>
+    <p>We hand-pick products we believe offer value to pet owners and animal lovers. However, we do not manufacture, test, or sell any of the products ourselves.</p>
+
+    <h2>No Extra Cost to You</h2>
+    <p>Your price remains the same whether you purchase through our affiliate links or go directly to Amazon. Our earnings do not affect your cost.</p>
+
+    <h2>Transparency & Trust</h2>
+    <p>We believe in transparency. That’s why we disclose our affiliate relationships clearly, so you are fully informed when shopping through our links.</p>
+
+    <h2>Questions?</h2>
+    <p>If you have questions regarding our affiliate relationships, feel free to <a href="mailto:support@pawstore.com">contact us</a>.</p>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const menuIcon = document.getElementById("menu-icon");
+      const navMenu = document.getElementById("nav-menu");
+
+      menuIcon.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+      });
+    });
+  </script>
+</body>
+</html>

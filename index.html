@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paw Store - Your Pet’s Favorite Place</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<script src="script.js"></script>
+<body>
+    <div class="animated-bg"></div>
+    <header>
+        <div class="logo">PAW STORE</div>
+    
+        <!-- Blue square hamburger icon -->
+        <div class="menu-icon" id="menu-icon"><img src="Images/menu-icon.svg"></div>
+    
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Everything Your Pet Needs</h1>
+            <p>Quality products and services to keep your furry friends happy!</p>
+            <a href="shop.html" class="shop-now">Shop Now</a>
+        </div>
+    </section>
+
+    <section class="products">
+        <h2>New Arrivals</h2>
+        
+        <div class="product-grid">
+            <div class="product">
+                <img src="https://m.media-amazon.com/images/I/71wItq45jmL._SL1500_.jpg" alt="Grooming Kit">
+                <h3>Product 1</h3>
+                <p>₹1,299</p>
+                <a href="#" class="buy-btn">Buy Now</a>
+            </div>
+            <div class="product">
+                <img src="https://m.media-amazon.com/images/I/71iWJiqLLLL._AC_UL480_FMwebp_QL65_.jpg" alt="Cleaning kit">
+                <h3>Product 2</h3>
+                <p>₹2,499</p>
+                <a href="#" class="buy-btn">Buy Now</a>
+            </div>
+            <div class="product">
+                <img src="https://m.media-amazon.com/images/I/71g03h7tp9L._SL1500_.jpg" alt="Pet Grooming Kit">
+                <h3>Product 3</h3>
+                <p>₹999</p>
+                <a href="#" class="buy-btn">Buy Now</a>
+            </div>
+            <div class="product">
+                <img src="https://m.media-amazon.com/images/I/71RM9OOMX-L._AC_UL480_FMwebp_QL65_.jpg" alt="Pet Food">
+                <h3>Product 4</h3>
+                <p>₹1,299</p>
+                <a href="#" class="buy-btn">Buy Now</a>
+            </div>
+            <div class="product">
+                <img src="https://m.media-amazon.com/images/I/71ksChZMLeL._AC_UL480_FMwebp_QL65_.jpg" alt="Pet Bed">
+                <h3>Product 5</h3>
+                <p>₹2,499</p>
+                <a href="#" class="buy-btn">Buy Now</a>
+            </div>
+            <div class="product">
+                <img src="https://m.media-amazon.com/images/I/61oJ7Q+BOaL._AC_UL480_FMwebp_QL65_.jpg" alt="Pet Grooming Kit">
+                <h3>Product 6</h3>
+                <p>₹999</p>
+                <a href="#" class="buy-btn">Buy Now</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h2>PAW STORE</h2>
+                <p>Because pets deserve the best!</p>
+            </div>
+    
+            <div class="footer-links">
+                <a href="services.html">Services</a> |
+                <a href="about.html">About</a> |
+                <a href="contact.html">Contact</a> |
+                <a href="privacy-policy.html">Policy</a> |
+                <a href="terms.html">Terms</a> |
+                <a href="affiliate-disclaimer.html">Disclaimer</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Paw Store. All Rights Reserved.</p>
+        </div>
+    
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const menuIcon = document.getElementById("menu-icon");
+            const navMenu = document.getElementById("nav-menu");
+    
+            menuIcon.addEventListener("click", () => {
+                navMenu.classList.toggle("active");
+            });
+    
+            const container = document.querySelector('.product-grid');
+            const allCards = Array.from(container.children);
+            let currentIndex = 0;
+            let visibleCount = getVisibleCount();
+            let intervalId;
+    
+            function getVisibleCount() {
+                if (window.innerWidth < 1280) return 5;
+                if (window.innerWidth < 768) return 3;
+                if (window.innerWidth < 600) return 1;
+                return 5;
+            }
+    
+            function renderVisibleCards() {
+                container.innerHTML = '';
+                for (let i = 0; i < visibleCount; i++) {
+                    const cardIndex = (currentIndex + i) % allCards.length;
+                    const card = allCards[cardIndex];
+                    card.classList.remove("center-card"); // Remove old class
+                    container.appendChild(card);
+                    if (i === Math.floor(visibleCount / 2)) {
+                        card.classList.add("center-card"); // Highlight middle one
+                    }
+                }
+            }
+    
+            function startRotation() {
+                clearInterval(intervalId);
+                const intervalTime = (visibleCount === 1) ? 3000 : 5000;
+                intervalId = setInterval(() => {
+                    currentIndex = (currentIndex + 1) % allCards.length;
+                    renderVisibleCards();
+                }, intervalTime);
+            }
+    
+            // Initial render
+            renderVisibleCards();
+            startRotation();
+    
+            // Handle screen resize
+            window.addEventListener('resize', () => {
+                const newCount = getVisibleCount();
+                if (newCount !== visibleCount) {
+                    visibleCount = newCount;
+                    renderVisibleCards();
+                    startRotation();
+                }
+            });
+        });
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us | Paw Store</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #f5f9fc;
+      color: #333;
+    }
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #fff;
+      padding: 16px 24px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+      position: relative;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: 700;
+      color: #007acc;
+      text-transform: uppercase;
+    }
+
+    .menu-icon {
+      display: none;
+      width: 30px;
+      cursor: pointer;
+    }
+
+    nav {
+      display: flex;
+      gap: 24px;
+    }
+
+    nav a {
+      text-decoration: none;
+      font-weight: 500;
+      color: #333;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #007acc;
+    }
+
+    /* Main Container */
+    .policy-container {
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 40px 40px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 122, 204, 0.1);
+    }
+
+    .policy-container h1 {
+      font-size: 34px;
+      color: #007acc;
+      border-bottom: 2px solid #e0e0e0;
+      padding-bottom: 16px;
+      margin-bottom: 30px;
+    }
+
+    .policy-container h2 {
+      font-size: 24px;
+      color: #005f99;
+      margin-top: 32px;
+    }
+
+    .policy-container p {
+      font-size: 17px;
+      line-height: 1.7;
+      margin-top: 14px;
+      color: #444;
+    }
+
+    .policy-container a {
+      color: #007acc;
+      text-decoration: underline;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .policy-container {
+        padding: 30px 20px;
+        margin: 30px 15px;
+      }
+
+      .policy-container h1 {
+        font-size: 28px;
+      }
+
+      .policy-container h2 {
+        font-size: 20px;
+      }
+
+      .policy-container p {
+        font-size: 15.5px;
+      }
+
+      nav {
+        position: absolute;
+        top: 100%;
+        right: 20px;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        padding: 10px 0;
+        flex-direction: column;
+        display: none;
+        z-index: 1000;
+        transform: scale(0.95);
+        transform-origin: top right;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        opacity: 0;
+      }
+
+      nav.active {
+        display: flex;
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      nav a {
+        padding: 10px 20px;
+        font-size: 15px;
+        width: 100%;
+        text-align: center;
+      }
+
+      .menu-icon {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Paw Store</div>
+    <div class="menu-icon" id="menu-icon">
+      <img src="Images/menu-icon.svg" alt="menu" width="30" height="30">
+    </div>
+    <nav id="nav-menu">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <div class="policy-container">
+    <h1>About Paw Store</h1>
+    <p>Welcome to <strong>Paw Store</strong> – your cozy corner on the internet dedicated to everything pets. We're not just a store; we're a community of passionate pet lovers who believe that our furry friends deserve the absolute best.</p>
+
+    <h2>Who We Are</h2>
+    <p>Paw Store is an affiliate-based platform designed to help you discover top-quality pet products from trusted brands, all in one place. Whether you're shopping for your dog, cat, or feathered friend, we’ve curated collections that combine love, quality, and functionality.</p>
+
+    <h2>Why We Do It</h2>
+    <p>As pet owners ourselves, we understand how important it is to find reliable products for our companions. From cozy beds and tasty treats to interactive toys and grooming essentials—we scout for items that make tails wag and whiskers twitch.</p>
+
+    <h2>How It Works</h2>
+    <p>We partner with major e-commerce platforms like Amazon through their affiliate program. This means when you click on a product link and make a purchase, we may earn a small commission—at no extra cost to you. It's how we keep our content free, up-to-date, and useful.</p>
+
+    <h2>What Makes Us Different</h2>
+    <p>We don’t just push products—we recommend what we believe in. Our suggestions are carefully picked, reviewed, and tailored for quality and performance. We're committed to transparency, trust, and tail-wagging satisfaction.</p>
+
+    <h2>Let’s Stay Connected</h2>
+    <p>We’re here to grow with you and your pet. Have a product suggestion or feedback? We’d love to hear from you! Reach out to us at <a href="mailto:support@pawstore.com">support@pawstore.com</a> and let's keep the conversation going.</p>
+
+    <p>Thanks for stopping by — and give your pet a treat from us!</p>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const menuIcon = document.getElementById("menu-icon");
+      const navMenu = document.getElementById("nav-menu");
+
+      menuIcon.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+      });
+    });
+  </script>
+
+</body>
+</html>

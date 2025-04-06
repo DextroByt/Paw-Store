@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Coming Soon</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #007acc, #00bcd4);
+      color: #fff;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .coming-soon-container {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 40px 30px;
+      border-radius: 16px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+      max-width: 600px;
+      width: 100%;
+    }
+
+    .coming-soon-container h1 {
+      font-size: 48px;
+      margin-bottom: 15px;
+    }
+
+    .coming-soon-container p {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+
+    .notify-btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #fff;
+      color: #007acc;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background 0.3s ease;
+    }
+
+    .notify-btn:hover {
+      background-color: #e0e0e0;
+    }
+
+    @media (max-width: 480px) {
+      .coming-soon-container h1 {
+        font-size: 32px;
+      }
+
+      .coming-soon-container p {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="coming-soon-container">
+    <h1>Coming Soon</h1>
+    <p>We're working on something awesome. Stay tuned!</p>
+    <a href="/" class="notify-btn">Back to Home</a>
+  </div>
+</body>
+</html>

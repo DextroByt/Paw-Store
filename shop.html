@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Paw Store - Shop</title>
+  <link rel="stylesheet" href="shop.css" />
+</head>
+<body>
+    <header>
+        <div class="logo">PAW STORE</div>
+    
+        <!-- Blue square hamburger icon -->
+        <div class="menu-icon" id="menu-icon"><img src="Images/menu-icon.svg"></div>    
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+  <section class="shop-controls">
+    <input type="text" id="searchInput" placeholder="Search products..."/>
+    <select id="categoryFilter">
+      <option value="all">All Categories</option>
+      <option value="food">Food</option>
+      <option value="accessories">Accessories</option>
+      <option value="grooming">Grooming</option>
+    </select>
+    <select id="sortSelect">
+      <option value="default">Sort By</option>
+      <option value="lowToHigh">Price: Low to High</option>
+      <option value="highToLow">Price: High to Low</option>
+    </select>
+  </section>
+
+  <section class="products">
+    <h2>All Products</h2>
+    <div class="product-grid" id="productGrid">
+      
+    </div>
+    <button class="show-more-btn" onclick="toggleProducts()">Show More</button>
+
+    <p class="affiliate-disclaimer">
+      As an Amazon Associate, we earn from qualifying purchases.
+    </p>
+  </section>
+
+  <footer>
+    <div class="footer-container">
+        <div class="footer-brand">
+            <h2>PAW STORE</h2>
+            <p>Because pets deserve the best!</p>
+        </div>
+
+        <div class="footer-links">
+            <a href="services.html">Services</a> |
+            <a href="about.html">About</a> |
+            <a href="contact.html">Contact</a> |
+            <a href="privacy-policy.html">Policy</a> |
+            <a href="terms.html">Terms</a> |
+            <a href="affiliate-disclaimer.html">Disclaimer</a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2025 Paw Store. All Rights Reserved.</p>
+    </div>
+
+</footer>
+
+  <script src="shop.js"></script>
+</body>
+</html>
